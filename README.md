@@ -6,6 +6,17 @@ Część informacji jest pozyskiwana automatycznie z plików PDF za pomocą **Ge
 
 ---
 
+## 🎯 Cel projektu
+
+Celem tego dashboardu jest ułatwienie podjęcia decyzji **w który fundusz warto zainwestować**.  
+Analiza uwzględnia nie tylko **stopy zwrotu** (zarówno narastające, jak i kroczące w różnych horyzontach),  
+ale także **ryzyko** oraz **kluczowe parametry** takie jak wielkość aktywów netto, struktura aktywów, alokacja sektorowa, geograficzna i walutowa.  
+
+Dzięki temu możliwe jest pełniejsze spojrzenie na fundusze – nie tylko „ile zarobiły”,  
+ale także **jak stabilnie się rozwijają i w jakich warunkach rynkowych funkcjonują**.  
+
+---
+
 ## 📂 Struktura projektu
 
 - **fundusze_get_data.ipynb** – główny notebook Jupyter  
