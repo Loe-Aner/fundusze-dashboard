@@ -19,7 +19,8 @@ ale także **jak stabilnie się rozwijają i w jakich warunkach rynkowych funkcj
 
 ## 📂 Struktura projektu
 
-- **fundusze_get_data.ipynb** – główny notebook Jupyter  
+- **fundusze_get_data.ipynb** – główny notebook Jupyter
+- **0. Dasboard - przyklady** - jak wygladaja poszczegolne strony
 - **1. Aktywa netto/**
   - `aktywa.xlsx`  
 - **2. Benchmark/**
