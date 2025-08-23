@@ -1,4 +1,4 @@
-# Funds Dashboard (Python + Power BI)
+# 📊 Funds Dashboard (Python + Power BI)
 
 Projekt do analizy i wizualizacji rentowności funduszy inwestycyjnych.  
 Dane źródłowe pochodzą z plików Excel/CSV oraz kart funduszu (PDF), które następnie są przetwarzane i wizualizowane w Power BI.  
