@@ -27,9 +27,11 @@ Część informacji jest pozyskiwana automatycznie z plików PDF za pomocą **Ge
   - `extraInfo.csv`  
 - **Karty funduszu/** – podfoldery = tickery funduszy  
   - `MIL27/2025-04-30.pdf`  
-  - `ING43/2025-07-31.pdf`  
+  - `ING43/2025-07-31.pdf`
+  - `.../....pdf`
 - **Notowania/**
   - `dane.csv` 
 - **Zwrot od Gemini/** – odpowiedzi Gemini (per ticker)  
   - `MIL27/...`  
-  - `ING43/...`  
+  - `ING43/...`
+  - `.../...`
