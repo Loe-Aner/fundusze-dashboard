@@ -60,16 +60,6 @@ unpivoted_zbior_3y AS (
     nazwa, MinDate22 AS Data
   FROM zbior_min_max_3y
   ORDER BY nazwa
-),
-
-rankingi_dzienne AS (
-  SELECT
-    kategoria,
-    nazwa,
-    DATA,
-    DENSE_RANK() OVER w AS ranking
-  FROM notowania 
-  WINDOW w AS (PARTITION BY kategoria, data ORDER BY Zamkniecie DESC)
 )
 
 -- ============================ CWICZENIA ============================
@@ -138,16 +128,7 @@ WHERE n1.DATA BETWEEN '2023-01-01' AND '2024-12-31'
 WINDOW w AS (PARTITION BY n1.nazwa, n1.DATA ORDER BY n2.DATA DESC)
 QUALIFY ROW_NUMBER() OVER w = 1;
 
--- 7. Średnia pozycja i udział w TOP3 funduszy w ramach kategorii
-SELECT 
-  kategoria,
-  nazwa,
-  ROUND(AVG(ranking), 2) AS sredni_rank,
-  ROUND(STDDEV(ranking), 2) AS odch_std_rank,
-  ROUND(AVG(CASE WHEN ranking <= 3 THEN 1 ELSE 0 END), 2) AS Top3 -- udział dni, w których fundusz był w TOP3 swojej kategorii
-FROM rankingi_dzienne
-GROUP BY kategoria, nazwa
-ORDER BY kategoria DESC;
+
 
 
 
