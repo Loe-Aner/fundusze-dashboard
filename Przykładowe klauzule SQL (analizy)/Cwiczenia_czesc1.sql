@@ -2,12 +2,12 @@
 
 WITH notowania_base AS (
   SELECT *
-  FROM read_parquet('C:\Users\piotr\OneDrive\_Programowanie - aplikacje\Python\Fundusze\Notowania\notowania.parquet')
+  FROM read_parquet('abc\notowania.parquet')
 ),
 
 extra_info AS (
   SELECT *
-  FROM read_parquet('C:\Users\piotr\OneDrive\_Programowanie - aplikacje\Python\Fundusze\Additional Tables\extra_info.parquet')
+  FROM read_parquet('abc\extra_info.parquet')
 ),
 
 notowania AS (
