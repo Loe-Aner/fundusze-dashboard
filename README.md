@@ -19,7 +19,7 @@ ale także **jak stabilnie się rozwijają i w jakich warunkach rynkowych funkcj
 
 ## 📂 Struktura projektu
 
-- **fundusze_get_data.ipynb** – główny notebook Jupyter
+- **fundusze_get_data.ipynb** - główny notebook Jupyter
 - **0. Dasboard - przyklady** - jak wygladaja poszczegolne strony
 - **1. Aktywa netto/**
   - `aktywa.xlsx`  
@@ -37,13 +37,15 @@ ale także **jak stabilnie się rozwijają i w jakich warunkach rynkowych funkcj
   - `waluty.xlsx`  
 - **Additional Tables/**
   - `extraInfo.csv`  
-- **Karty funduszu/** – podfoldery = tickery funduszy  
+- **Karty funduszu/** - podfoldery = tickery funduszy  
   - `MIL27/2025-04-30.pdf`  
   - `ING43/2025-07-31.pdf`
   - `.../....pdf`
 - **Notowania/**
-  - `dane.csv` 
-- **Zwrot od Gemini/** – odpowiedzi Gemini (per ticker)  
+  - `dane.csv`
+- **Przykładowe Miary w DAX/** - jak niektóre parametry są liczone
+- **Przykładowe klauzule SQL (analizy)/** - analizy zbiorów z wykorzystaniem SQL'a
+- **Zwrot od Gemini/** - odpowiedzi Gemini (per ticker)  
   - `MIL27/...`  
   - `ING43/...`
   - `.../...`
