@@ -114,7 +114,7 @@ WINDOW w AS (PARTITION BY uz.nazwa ORDER BY uz.DATA)
 QUALIFY ROW_NUMBER() OVER w > 1
 ORDER BY CAGR_3y_perc DESC;
 
--- 6. Jakie bylo notowanie rok temu w ostatnich dwoch latach?
+-- 6. Jakie było notowanie najbliższe sprzed roku (do 20 dni wcześniej) w latach 2023–2024?
 SELECT
   n1.nazwa,
   n1.DATA AS data_n,
@@ -127,6 +127,7 @@ LEFT JOIN notowania AS n2
 WHERE n1.DATA BETWEEN '2023-01-01' AND '2024-12-31'
 WINDOW w AS (PARTITION BY n1.nazwa, n1.DATA ORDER BY n2.DATA DESC)
 QUALIFY ROW_NUMBER() OVER w = 1;
+
 
 
 
