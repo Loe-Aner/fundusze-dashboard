@@ -114,6 +114,19 @@ WINDOW w AS (PARTITION BY uz.nazwa ORDER BY uz.DATA)
 QUALIFY ROW_NUMBER() OVER w > 1
 ORDER BY CAGR_3y_perc DESC;
 
+-- 6. Jakie bylo notowanie rok temu w ostatnich dwoch latach?
+SELECT
+  n1.nazwa,
+  n1.DATA AS data_n,
+  n1.Zamkniecie AS zamkniecie_n,
+  n2.Zamkniecie AS zamkniecie_n_minus1
+FROM notowania AS n1
+LEFT JOIN notowania AS n2
+  ON n2.DATA BETWEEN n1.DATA - INTERVAL '1 year 20 days' AND n1.DATA - INTERVAL '1 year'
+ AND n1.nazwa = n2.nazwa
+WHERE n1.DATA BETWEEN '2023-01-01' AND '2024-12-31'
+WINDOW w AS (PARTITION BY n1.nazwa, n1.DATA ORDER BY n2.DATA DESC)
+QUALIFY ROW_NUMBER() OVER w = 1;
 
 
 
